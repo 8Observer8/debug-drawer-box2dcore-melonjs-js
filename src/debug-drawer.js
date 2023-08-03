@@ -4,10 +4,6 @@ export default class DebugDrawer {
     constructor(renderer, pixelsPerMeter) {
         this.renderer = renderer;
         this.pixelsPerMeter = pixelsPerMeter;
-
-        this.translationX = 0;
-        this.translationY = 0;
-        this.angle = 0;
     }
 
     DrawSolidPolygon(vertices, vertexCount, color) {
@@ -15,16 +11,16 @@ export default class DebugDrawer {
         this.renderer.beginPath();
         const c = new me.Color().setFloat(color.r, color.g, color.b, 1);
         this.renderer.setColor(c);
-        this.renderer.moveTo((vertices[0].x + this.translationX) * this.pixelsPerMeter,
-            (vertices[0].y + this.translationY) * this.pixelsPerMeter);
-        this.renderer.lineTo((vertices[1].x + this.translationX) * this.pixelsPerMeter,
-            (vertices[1].y + this.translationY) * this.pixelsPerMeter);
-        this.renderer.lineTo((vertices[2].x + this.translationX) * this.pixelsPerMeter,
-            (vertices[2].y + this.translationY) * this.pixelsPerMeter);
-        this.renderer.lineTo((vertices[3].x + this.translationX) * this.pixelsPerMeter,
-            (vertices[3].y + this.translationY) * this.pixelsPerMeter);
-        this.renderer.lineTo((vertices[0].x + this.translationX) * this.pixelsPerMeter,
-            (vertices[0].y + this.translationY) * this.pixelsPerMeter);
+        this.renderer.moveTo(vertices[0].x * this.pixelsPerMeter,
+            vertices[0].y * this.pixelsPerMeter);
+        this.renderer.lineTo(vertices[1].x * this.pixelsPerMeter,
+            vertices[1].y * this.pixelsPerMeter);
+        this.renderer.lineTo(vertices[2].x * this.pixelsPerMeter,
+            vertices[2].y * this.pixelsPerMeter);
+        this.renderer.lineTo(vertices[3].x * this.pixelsPerMeter,
+            vertices[3].y * this.pixelsPerMeter);
+        this.renderer.lineTo(vertices[0].x * this.pixelsPerMeter,
+            vertices[0].y * this.pixelsPerMeter);
         this.renderer.stroke();
     }
 
