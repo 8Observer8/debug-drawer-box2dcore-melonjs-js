@@ -1,22 +1,22 @@
-import * as me from "melonjs";
-import DebugDrawer from "./debug-drawer.js";
-import { b2BodyType } from "@box2d/core";
-import { b2CircleShape } from "@box2d/core";
-import { b2PolygonShape } from "@box2d/core";
-import { b2Vec2 } from "@box2d/core";
-import { b2World } from "@box2d/core";
-import { DrawShapes } from "@box2d/core";
+import * as me from 'melonjs';
+import DebugDrawer from './debug-drawer.js';
+import { b2BodyType } from '@box2d/core';
+import { b2CircleShape } from '@box2d/core';
+import { b2PolygonShape } from '@box2d/core';
+import { b2Vec2 } from '@box2d/core';
+import { b2World } from '@box2d/core';
+import { DrawShapes } from '@box2d/core';
 
 me.device.onReady(
     () => {
         if (!me.video.init(300, 300, {
-                parent: "screen",
+                parent: 'screen',
                 renderer: me.video.WEBGL,
-                scale: "fit",
+                scale: 'fit',
                 antiAlias: true
             })) //
         {
-            alert("Your browser does not support HTML5 canvas.");
+            alert('Your browser does not support HTML5 canvas.');
             return;
         }
 
@@ -74,7 +74,7 @@ me.device.onReady(
             }
 
             draw(renderer) {
-                renderer.clearColor("#000000");
+                renderer.clearColor('#000000');
                 renderer.setGlobalAlpha(1);
                 DrawShapes(this.debugDrawer, this.world);
             }
