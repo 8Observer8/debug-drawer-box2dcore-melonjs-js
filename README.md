@@ -1,4 +1,4 @@
-[Live demo](https://8observer8.github.io/webgl10-js/debug-drawer-box2dcore-melonjs-js/)
+[Live demo](https://8observer8.github.io/examples/box2dcore/melonjs/debug-draw-js/)
 
 Playgrounds:
 
