@@ -11,7 +11,7 @@ me.device.onReady(
     () => {
         if (!me.video.init(300, 300, {
                 parent: "screen",
-                renderer: me.video.CANVAS,
+                renderer: me.video.WEBGL,
                 scale: "fit",
                 antiAlias: true
             })) //
