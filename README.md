@@ -1,11 +1,9 @@
-Buy me a coffee: https://boosty.to/ivan_8observer8/donate This service supports PayPal. You can perform single sign-on with your Google account.
-
 [Live demo](https://8observer8.github.io/webgl10-js/debug-drawer-box2dcore-melonjs-js/)
 
 Playgrounds:
 
-- [Replit](https://replit.com/@8Observer8/Debug-drawer-using-box2dcore-Melonjs-JS)
 - [Plunker](https://plnkr.co/edit/KvkGgejqBojm81k8?preview)
+- [Replit](https://replit.com/@8Observer8/Debug-drawer-using-box2dcore-Melonjs-JS)
 - [Glitch](https://glitch.com/edit/#!/flax-befitting-caterpillar)
 
 Topic and discussions:
@@ -21,6 +19,8 @@ Instruction for building and running the project in debug and release using Roll
 - Install these packages globally with the command:
 
 > npm i -g http-server rollup uglify-js
+
+- Add the Rollup bin folder to the Path. Type this command to know where npm was installed `npm config get prefix`. This command will show you the npm location. You will find the "node_modules" folder there. Go to the "rollup/bin" folder and copy this path, for example for me: `C:\Users\8Observer8\AppData\Roaming\npm\node_modules\rollup\dist\bin`. Add this folder to the path variable.
 
 - Run http-server in the project directory:
 
@@ -41,3 +41,5 @@ Note. Rollup will automatically keep track of saving changes to files and build 
 > npm run release
 
 Note. After this command, Rollup will create a compressed index.js file. Compression is done using the uglify-js package.
+
+If you want to thank me: https://8observer8.github.io/donate.html
